@@ -16,7 +16,7 @@ class APIDesenho2 implements APIDesenho {
     }
 }
 
-abstract class Forma {
+abstract class Form {
 
     protected $api;
     protected $x;
@@ -27,7 +27,7 @@ abstract class Forma {
     }
 }
 
-class Circulo extends Form{
+class Circulo extends Form {
     protected $radio;
 
     public function __construct($x, $y, $radius, APIDesenho $api) {
