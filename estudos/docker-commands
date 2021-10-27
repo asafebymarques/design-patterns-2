@@ -1,0 +1,147 @@
+docker ps - Buscar Containers rodando
+
+docker run -it ubuntu /bin/base - Rodar it = interagir na imagem ubuntu e entrar no bash
+
+docker ps -a = Todos os containers
+
+docker ps -a -q = Todos os container e só o id
+
+docker run -p 8888:80 nginx - Docker rodar a imagem do nginx acessar a 8888 no computador referência na porta 80 do ngix do containers
+
+docker run -d (Detached) = desatachar do processo
+
+docker stop nome_contaier = para parar o containers
+
+docker start nome_container = start o containers
+
+docker rm nome_container -f = remover container
+
+docker rm $(docker ps -a -q) -f = mata todas as imagens
+
+docker images = todas as imagens que baixou 
+
+docker rmi nome_imagem = Remover a imagem
+
+docker rmi $(docker images -q) -f = mata todas as imagens
+
+CRIAR main.go
+///////////////////////////////////////////////////////////////
+Dockerfile
+ 
+FROM golang:1.15 = De onde a imagem só buscar em dockerhub
+WORKDIR /go/src/fullcycle = aonde vai iniciar a imagem
+COPY . . = Arquivo gerar a imagem - Copiar os arquivos que estão na pasta e colar na iamgem na pasta acima
+
+RUN GOOS=linux go build -ldflags="-s -w" EXECUTAR O COMANDO PARA COMPILAR O GOLANG
+
+RUN ls -la = COMANDO PARA VER ARQUIVOS DENTRO DA PASTA
+
+CMD ["./fullcycle"]
+
+docker build . = Docker build com . (xpto) na mesma pasta
+
+RUN = Executa um COMANDO
+
+docker build -t usuarioDockerHub/nome_do_container . 
+
+docker run nome_imagem 
+
+FROM golang:1.15 as builder
+....
+
+FROM scratch
+WORKDIR /go/src/fullcycle
+COPY --FROM=builder /go/src/fullcycle/fullcycle . = CRIAR UMA IMAGEM SEM TAMANHO DE MINIMO E COPIAR AS COISAS PARA NOVA IMAGEM
+
+docker build -t .....
+
+docker run
+
+docker images 1.39MB 
+
+docker login = fazer login no dockerhub
+
+docker push nome_imagem = subir a imagem docker usuarioDockerHub
+
+/////////////////////////////////////////////////////////////
+
+docker-compose.yaml
+
+version: '3'
+
+services:
+    nginx: 
+        image: nginx
+        ports: 
+            -8080:80
+    redis: 
+        image: redis:apline
+        expose:
+          -6379
+
+    
+
+docker-compose up = Ele vai subir o serviço do docker-compose
+
+docker-compose down = mata o serviço rodando
+
+docker-composer up -d = detached
+
+docker-composer ps
+
+docker exer -it name_container bash
+
+ls
+
+cd /usr/share/nginx/html
+
+rm -f index.html
+
+apt-get install vim
+
+apt-get update
+
+cls
+
+vim index.html
+
+<h1>Full Cycle Rocks!</h1>
+
+curl localhost:8080
+
+docker-composer down
+
+Container morre = todas alterações morrem juntos com ele.
+
+VOLUME = Essa pasta vai ser montada nessa pasta
+
+version: '3'
+
+services:
+    nginx: 
+        image: nginx
+        volumes: 
+           -./nginx:/usr/share/ngnix/hmtl/ 
+        ports: 
+            -8080:80
+    redis: 
+        image: redis:apline
+        expose:
+          -6379
+
+docker-composer up -d
+docker run -v 
+
+Example 
+version: '3'
+
+services:
+  apache:
+    image: 'php:7.2-apache'
+    container_name: asafe-marques-exercise
+    restart: always
+    ports:
+      - '8100:80'
+    volumes:
+      - ./jumia-exercise.conf:/etc/apache2/sites-available/000-default.conf
+      - ./app/:/var/www/html/jumia-exercise/

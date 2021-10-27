@@ -1,0 +1,115 @@
+  PSR 1 - 12 - Coding Style
+PSR 4 - AUTOLOADING
+PSR 3 LOGGER
+PSR16 SIMPLE CACHE
+addslashes
+
+Laravel 8, 7, 6
+Zend Framework Expressive 3
+Symfony 5
+Code Igniter 3,4
+Yii2 
+DRUPAL
+MAGENTO (E-commerce)
+WORDPRESS Plugin
+
+SCRUM, KANBAN, AGILE
+
+SEO
+
+RabbitMq
+Redis
+Apache Kafka
+
+LUNUX - UBUNTU - DEBIAN - BUDGIE
+
+SOAPUI / Postman/ 
+
+Solid
+Design Patterns 
+MVC
+DDD - Domain Driven Design -- Domain, Domain expert, Linguagem Ubiqua, bounded context,  context maps
+Cliente Fornecedor, conformista, parceiros, Nucleo Compartilhado, Camada Anti-corrupção
+TDD - Test-driven development
+
+GIT 
+SVN
+
+Angular
+Jquery
+CSS3
+HTML5
+PHP
+AJAX
+
+LAMP
+
+MIGRATIONS
+JOBS
+
+
+PUB/SUB
+CACHE / MEMCACHE
+
+MONGODB
+
+MYSQL / MARIADB/ SQL/ SQLSERVER / ORACLE
+
+JIRA / Devops / Confluence ...
+  
+DEVOPS AZURE / AWS AMAZON 
+
+$_REQUEST - $_GET $_POST $_COOKIE;
+$_COKKIE[''];
+setcookie(valor);
+$_SESSION['chave'] = valor;
+session_start();
+use SlugNome = Traits;
+filter_list
+
+use esse valor ou o outro se o primeiro não estiver definido
+$nomeDaPessoa = $pessoa['nome'] ?? 'Sem Nome';
+$false ?: 'outrovalor'
+$nulo ?? 'outrovalor'
+
+?-> Sua principal função é garantir que o que quer que esteja querendo acessar de um objeto só seja acessado se o objeto não for nulo.
+
+
+Uma tabela pode ter apenas ma chave primária, mas vários índices.
+
+Um chave primária é única, enquanto um índice não precisa ser exclusivo. Portanto, o valor da chave primária identifica um registro em uma tabela,
+o valor do índice não necessariamente.
+
+Encapsulamento - Private, Public, Protected
+
+Uma classe final, é uma classe que não permite que seja criada subclasses dela. Ou seja, não permite herança.
+
+Uma classe abstrata pode conter métodos completos ou incompletos São classes que não podem ser diretamente instanciadas. 
+Elas servem como modelo para que outras classes conheçam a classe, .
+Uma Interface pode conter apenas a assinatura de um método, mas nenhum corpo ou implementação.
+
+Abstração (Identidade, propriedadas, métodos) == Clasees
+Encapsulamento(Propriedades privadas, acessiveis por getters and setters) - 
+Herança(Receber metodos e acessar atributos da classe pai) - 
+Polimorfismo (Reescrever o método em classes filhas)
+
+O SOLID refere-se aos cinco pilares que nos auxiliam a criar códigos mais flexíveis, de fácil manutenção e entendimento.
+DDD — Domain Driven Design
+Uma das abordagens mais utilizada para modelagem de nossas classes,
+no desenvolvimento do core de nossas aplicação, é o DDD. 
+Esse modelo de desenvolvimento foca no domínio de nosso problema, fazendo com que sigamos os principios do SOLID,
+evitando dar responsabilidade de mais a nossas estruturas, modelando nosso Software focando em linguagem oblíqua,
+que é nada mais nada menos que uma linguagem falada pelo usuário do nosso sistema como “EfetuarTransferencia()”, “DepositarCheque()”, etc.
+
+SOLID - Segurança - Manutenção e Reutilizável
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+D — Dependency Inversion Principle (Princípio da inversão da dependência)
+
+De forma simplificada, $this se refere ao objeto (instância) atual, e self se refere à classe. 
+Portanto, como regra geral, usa-se $this para acessar membros (atributos, métodos) da instância e self para acessar membros estáticos.
+
+
+INJECTION DEPENDENCY (Construct, Method, Settter) Injection
